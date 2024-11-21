@@ -32,6 +32,5 @@ public class Bankomat_Beispiel {
                 isfinished = true;
             }
         }
-
     }
 }
