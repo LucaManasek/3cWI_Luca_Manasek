@@ -16,8 +16,8 @@ public class Wuerfelspiel_Beispiel {
             System.out.println("2. End the game");
             int selection = scanner.nextInt();
             if (selection==1) {
-                int randomNum1 = random.nextInt(0,6);
-                int randomNum2 = random.nextInt(0,6);
+                int randomNum1 = random.nextInt(1,6);
+                int randomNum2 = random.nextInt(1,6);
                 diceSum1 = diceSum1 + randomNum1;
                 diceSum2 = diceSum2 + randomNum2;
                 System.out.println("Your rolled a " + randomNum1);
