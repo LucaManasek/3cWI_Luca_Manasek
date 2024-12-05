@@ -2,19 +2,15 @@ package at.luca.project.OO_Programming.Car;
 
 public class Main {
     public static void main(String[] args) {
-        Car c1 = new Car();
-        c1.brand = "Audi";
-        c1.fuelConsumption = 7;
+        Car c1 = new Car(7, "Audi", "A12345");
         c1.fuelAmount = 70;
         c1.maxFuelAmount = 70;
-        c1.serialNumber = "A1234";
 
-        Car c2 = new Car();
-        c2.brand = "Mercedes";
-        c2.fuelConsumption = 6;
+        Car c2 = new Car(6, "Mercedes", "M1234");
         c2.fuelAmount = 20;
         c2.maxFuelAmount = 40;
-        c2.serialNumber = "M1234";
+
+        Car c3 = new Car(14, "Volvo", "V1234");
 
         System.out.println(c2.fuelAmount);
         c2.drive();

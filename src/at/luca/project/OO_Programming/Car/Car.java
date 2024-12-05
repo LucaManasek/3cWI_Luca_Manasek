@@ -1,12 +1,18 @@
 package at.luca.project.OO_Programming.Car;
 
 public class Car {
-    public int fuelConsumption;
-    public String brand;
-    public String serialNumber;
-    public int fuelAmount;
-    public int maxFuelAmount;
+    private int fuelConsumption;
+    private String brand;
+    private String serialNumber;
+    private int fuelAmount;
+    private int maxFuelAmount;
     private String color;
+
+    public Car(int fuelConsumption, String brand, String serialNumber) {
+        this.fuelConsumption = fuelConsumption;
+        this.brand = brand;
+        this. serialNumber = serialNumber;
+    }
 
     public void drive() {
         this.fuelAmount = this.fuelAmount - this.fuelConsumption;
