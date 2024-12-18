@@ -7,11 +7,21 @@ public class Car {
     private int fuelAmount;
     private int maxFuelAmount;
     private String color;
+    private Engine engine;
 
-    public Car(int fuelConsumption, String brand, String serialNumber) {
+    public Car(int fuelConsumption, String brand, String serialNumber, Engine engine) {
         this.fuelConsumption = fuelConsumption;
         this.brand = brand;
         this. serialNumber = serialNumber;
+        this.engine = engine;
+    }
+
+    public Engine getEngine() {
+        return engine;
+    }
+
+    public void setEngine(Engine engine) {
+        this.engine = engine;
     }
 
     public void drive() {
