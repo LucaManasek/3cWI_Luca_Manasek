@@ -4,16 +4,16 @@ public class Car {
     private int fuelConsumption;
     private String brand;
     private String serialNumber;
-    private int fuelAmount;
-    private int maxFuelAmount;
     private String color;
     private Engine engine;
+    private Tank tank;
 
-    public Car(int fuelConsumption, String brand, String serialNumber, Engine engine) {
+    public Car(int fuelConsumption, String brand, String serialNumber, Engine engine, Tank tank) {
         this.fuelConsumption = fuelConsumption;
         this.brand = brand;
-        this. serialNumber = serialNumber;
+        this.serialNumber = serialNumber;
         this.engine = engine;
+        this.tank = tank;
     }
 
     public Engine getEngine() {
@@ -24,9 +24,17 @@ public class Car {
         this.engine = engine;
     }
 
-    public void drive() {
-        this.fuelAmount = this.fuelAmount - this.fuelConsumption;
+    public Tank getTank() {
+        return tank;
+    }
+
+    public void setTank(Tank tank) {
+        this.tank = tank;
+    }
+
+    public void drive(int speed) {
         System.out.println("I am driving");
+        this.tank.setCurrentFuelAmount(this.tank.getCurrentFuelAmount() - this.fuelConsumption * speed);
     }
 
     public void doBreak() {
@@ -34,7 +42,7 @@ public class Car {
     }
 
     public void turboBoost() {
-        if (this.fuelAmount >= this.maxFuelAmount / 10 ) {
+        if (this.tank.getCurrentFuelAmount() >= this.tank.getMaxFuelAmount() / 10 ) {
             System.out.println("SuperBoostModer");
         }
         else  {
@@ -49,7 +57,7 @@ public class Car {
     }
 
     public void getRemainingRange() {
-        System.out.println(this.fuelAmount / this.fuelConsumption);
+        System.out.println(this.tank.getCurrentFuelAmount() / this.fuelConsumption);
     }
 
     public int getFuelConsumption() {
@@ -74,22 +82,6 @@ public class Car {
 
     public void setSerialNumber(String serialNumber) {
         this.serialNumber = serialNumber;
-    }
-
-    public int getFuelAmount() {
-        return fuelAmount;
-    }
-
-    public void setFuelAmount(int fuelAmount) {
-        this.fuelAmount = fuelAmount;
-    }
-
-    public int getMaxFuelAmount() {
-        return maxFuelAmount;
-    }
-
-    public void setMaxFuelAmount(int maxFuelAmount) {
-        this.maxFuelAmount = maxFuelAmount;
     }
 
     public String getColor() {
