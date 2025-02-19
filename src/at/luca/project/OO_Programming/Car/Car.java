@@ -1,7 +1,12 @@
 package at.luca.project.OO_Programming.Car;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Car {
     private int fuelConsumption;
+    private List<RearviewMirror> mirrors;
+    private List<Tires> tires;
     private String brand;
     private String serialNumber;
     private String color;
@@ -14,6 +19,31 @@ public class Car {
         this.serialNumber = serialNumber;
         this.engine = engine;
         this.tank = tank;
+        this.mirrors = new ArrayList<>();
+    }
+
+    public List<Tires> getTires() {
+        return tires;
+    }
+
+    public void setTires(List<Tires> tires) {
+        this.tires = tires;
+    }
+
+    public List<RearviewMirror> getMirrors() {
+        return mirrors;
+    }
+
+    public void setMirrors(List<RearviewMirror> mirrors) {
+        this.mirrors = mirrors;
+    }
+
+    public void addMirror(RearviewMirror rearviewMirror) {
+        this.mirrors.add(rearviewMirror);
+    }
+
+    public void addTires(List<Tires> tires) {
+        this.tires = tires;
     }
 
     public Engine getEngine() {
