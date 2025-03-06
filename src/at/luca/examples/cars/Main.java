@@ -13,5 +13,12 @@ public class Main {
         Cars c1 = new Cars("black", 340, 400000, 80,m1,e1);
         Cars c2 = new Cars("blue", 320,350000,75,m2,e2);
         Cars c3 = new Cars("red", 330, 380000,90,m2,e3);
+
+        c1.getPrice();
+        c2.getPrice();
+        c3.getPrice();
+
+        c1.fuelUsage(40000);
+        c1.fuelUsage(60000);
     }
 }

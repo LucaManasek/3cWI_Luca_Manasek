@@ -1,5 +1,7 @@
 package at.luca.examples.cars;
 
+import javax.swing.*;
+
 public class Cars {
     private String color;
     private int maxVelocity;
@@ -66,7 +68,16 @@ public class Cars {
     }
 
     public void getPrice() {
+        float endPrice = getBasePrice() - getBasePrice() * (this.manufacturer.getSale() / 100);
+        System.out.println("Der Preis beträgt: " + endPrice);
+    }
 
-        System.out.println("Der Preis beträgt: " );
+    public void fuelUsage (int distanceTraveled) {
+        if (distanceTraveled<=50000) {
+            System.out.println("Der Benzinverbrauch beträgt " + getBaseConsume());
+        }
+        else {
+            System.out.println("Der Benzinverbrauch beträgt " + (getBaseConsume() + getBaseConsume() * 0.098));
+        }
     }
 }

@@ -2,7 +2,7 @@ package at.luca.examples.cars;
 
 public class Manufacturer {
     private String landOfOrigin;
-    private int Sale;
+    private float Sale;
 
     public Manufacturer(String landOfOrigin, int sale) {
         this.landOfOrigin = landOfOrigin;
@@ -17,7 +17,7 @@ public class Manufacturer {
         this.landOfOrigin = landOfOrigin;
     }
 
-    public int getSale() {
+    public float getSale() {
         return Sale;
     }
 
